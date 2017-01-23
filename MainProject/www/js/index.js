@@ -45,5 +45,15 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+
+	testPow: function (x, n) {
+	  var result = 1;
+
+	  for (var i = 0; i < n; i++) {
+		result *= x;
+	  }
+
+	  return result;
+	}
 };
