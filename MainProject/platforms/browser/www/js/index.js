@@ -45,5 +45,22 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+
+        Require('calculations', function(all) {
+            var calc = new all.calculations.IntCalculation();
+            console.log(calc.getResult());
+        });
+    },
+
+	testPow: function (x, n) {
+	  var result = 1;
+
+	  for (var i = 0; i < n; i++) {
+		result *= x;
+	  }
+
+	  return result;
+	}
+
+
 };
