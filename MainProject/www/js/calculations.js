@@ -26,7 +26,7 @@ Require.modules.calculations = function (all) {
     };
 
     var AddCalculation = function() {
-        BaseCalculation.apply(this, arguments);
+        AddCalculation.parent.constructor.apply(this, arguments);
     };
 
     inherit(AddCalculation, BaseCalculation);
