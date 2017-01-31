@@ -49,6 +49,12 @@ var app = {
         Require('calculations', function(all) {
             var calc = new all.calculations.IntCalculation();
             console.log(calc.getResult());
+
+            var int1 =  new all.calculations.IntCalculation();
+            var int2 =  new all.calculations.IntCalculation();
+
+            var add = new all.calculations.AddCalculation([int1, int2]);
+            var res = add.getResult();
         });
     },
 
